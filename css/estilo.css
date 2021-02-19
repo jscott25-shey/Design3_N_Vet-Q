@@ -54,11 +54,11 @@ body{
 /*medidas de contenedor de pagina*/
 .container{
     width: 90%;
-    max-width: 1250px;
     margin: 0 auto;
+    box-sizing: border-box;
     overflow: hidden;
     padding: 15px 0 ;
-    height: auto;
+    height:inherit;
 }
 
 .container--modifier{
@@ -68,9 +68,10 @@ body{
 .hero{
     display: block;
     width: auto;
-    min-height: 120vh;
+    height: 100vh;
     margin: inherit;
     padding: 0;
+   
     
 }
 .mockup{
@@ -104,7 +105,8 @@ body{
 .nav_container{
   display: grid;
   grid-template-columns: 25fr 25fr 25fr;
-  grid-template-rows: 5fr 20fr;
+   grid-row-start: 1;
+    grid-row-end: 2;
   grid-column-start: 4;
   grid-column-end: 1;
  
@@ -802,13 +804,12 @@ transition: all 1s ease;
     .wave{
         stroke: none;
         fill: #fff;
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        position: absolute;
-        transform: translatey(135px)
-        ;
-      
+          display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    transform: translatey(-190px)
+    ;
     
     }
     .nav_container{
@@ -851,13 +852,6 @@ transition: all 1s ease;
     .background-p{
         display: none;
     }
-    .mockup{
-        display: block;
-        position: absolute;
-        width:60%;
-        top: 67%;
-        transform: translatex(100px);
-       }
 
     .icon_services{
         display: grid;
@@ -942,16 +936,9 @@ transition: all 1s ease;
         justify-content: flex-end;
         width: 100%;
         position: absolute;
-        transform: translatey(135px)
+        transform: translatey(-175px)
         ;
     }
-    .mockup{
-        display: block;
-        position: absolute;
-        width:60%;
-        top: 74%;
-        transform: translatex(100px);
-       }
     .nav_container{
         width: 100%;
         padding:0;
@@ -974,18 +961,12 @@ transition: all 1s ease;
         justify-content: flex-end;
         width: 100%;
         position: absolute;
-        transform: translatey(135px)
+        transform: translatey(-185px)
         ;
       
     
     }
-    .mockup{
-        display: block;
-        position: absolute;
-        width:60%;
-        top: 77%;
-        transform: translatex(90px);
-       }
+  
        .tittle_services{
         width: 50%;
       
@@ -1006,7 +987,7 @@ transition: all 1s ease;
         justify-content: flex-end;
         width: 100%;
         position: absolute;
-        transform: translatey(135px)
+        transform: translatey(-180px)
         ;
       
     
@@ -1024,14 +1005,4 @@ transition: all 1s ease;
         text-decoration: none;
     }
 }
-@media screen and (max-width: 430px){
-    .wave{
-        stroke: none;
-        fill: #fff;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        transform: translateY(100px)
-        ;
-    }
-}
+
